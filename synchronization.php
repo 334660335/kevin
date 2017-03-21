@@ -6,9 +6,6 @@ class Synchronization
      */
     public function deploy()
     {
-		$data = shell_exec('git pull');
-		print_r($data);
-		exit;
         $commands = ['cd /data/wwwroot/kevin/www', 'git pull'];
 		$headers = $this->__getallheaders();
         $signature = $headers['X-Hub-Signature']; // $headers = getallheaders(); $headers['X-Hub-Signature']
